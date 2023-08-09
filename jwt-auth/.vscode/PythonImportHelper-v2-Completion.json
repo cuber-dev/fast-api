@@ -1,0 +1,355 @@
+[
+    {
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPBearer",
+        "importPath": "fastapi.security",
+        "description": "fastapi.security",
+        "isExtraImport": true,
+        "detail": "fastapi.security",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPAuthorizationCredentials",
+        "importPath": "fastapi.security",
+        "description": "fastapi.security",
+        "isExtraImport": true,
+        "detail": "fastapi.security",
+        "documentation": {}
+    },
+    {
+        "label": "OAuth2PasswordBearer",
+        "importPath": "fastapi.security",
+        "description": "fastapi.security",
+        "isExtraImport": true,
+        "detail": "fastapi.security",
+        "documentation": {}
+    },
+    {
+        "label": "OAuth2PasswordRequestForm",
+        "importPath": "fastapi.security",
+        "description": "fastapi.security",
+        "isExtraImport": true,
+        "detail": "fastapi.security",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "jwt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "jwt",
+        "description": "jwt",
+        "detail": "jwt",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "importPath": "decouple",
+        "description": "decouple",
+        "isExtraImport": true,
+        "detail": "decouple",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "jwt_bearer",
+        "kind": 6,
+        "importPath": "app.auth.jwt_bearer",
+        "description": "app.auth.jwt_bearer",
+        "peekOfCode": "class jwt_bearer(HTTPBearer):\n    def __init__(self, auto_error: bool = True):\n        super(jwt_bearer, self).__init__(auto_error=auto_error)\n    async def __call__(self, request: Request):\n        credentials: HTTPAuthorizationCredentials = await super(\n            jwt_bearer, self\n        ).__call__(request)\n        if credentials:\n            if not credentials.scheme == \"Bearer\":\n                raise HTTPException(",
+        "detail": "app.auth.jwt_bearer",
+        "documentation": {}
+    },
+    {
+        "label": "token_response",
+        "kind": 2,
+        "importPath": "app.auth.jwt_handler",
+        "description": "app.auth.jwt_handler",
+        "peekOfCode": "def token_response(token: str):\n    return {\n        'access_token': token\n    }\ndef signJWT(user_id: str):\n    payload = {\n        'user_id': user_id,\n        'expires': time.time() + 600\n    }\n    token = jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)",
+        "detail": "app.auth.jwt_handler",
+        "documentation": {}
+    },
+    {
+        "label": "signJWT",
+        "kind": 2,
+        "importPath": "app.auth.jwt_handler",
+        "description": "app.auth.jwt_handler",
+        "peekOfCode": "def signJWT(user_id: str):\n    payload = {\n        'user_id': user_id,\n        'expires': time.time() + 600\n    }\n    token = jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)\n    return token_response(token)\ndef decodeJWT(token: str):\n    try:\n        decode_token = jwt.decode(token,JWT_SECRET,algorithm=JWT_ALGORITHM)",
+        "detail": "app.auth.jwt_handler",
+        "documentation": {}
+    },
+    {
+        "label": "decodeJWT",
+        "kind": 2,
+        "importPath": "app.auth.jwt_handler",
+        "description": "app.auth.jwt_handler",
+        "peekOfCode": "def decodeJWT(token: str):\n    try:\n        decode_token = jwt.decode(token,JWT_SECRET,algorithm=JWT_ALGORITHM)\n        return decode_token if decode_token['expires'] >= time.time() else None\n    except:\n        return {}",
+        "detail": "app.auth.jwt_handler",
+        "documentation": {}
+    },
+    {
+        "label": "JWT_SECRET",
+        "kind": 5,
+        "importPath": "app.auth.jwt_handler",
+        "description": "app.auth.jwt_handler",
+        "peekOfCode": "JWT_SECRET = config('JWT_SECRET')\nJWT_ALGORITHM = config('JWT_ALGORITHM')\ndef token_response(token: str):\n    return {\n        'access_token': token\n    }\ndef signJWT(user_id: str):\n    payload = {\n        'user_id': user_id,\n        'expires': time.time() + 600",
+        "detail": "app.auth.jwt_handler",
+        "documentation": {}
+    },
+    {
+        "label": "JWT_ALGORITHM",
+        "kind": 5,
+        "importPath": "app.auth.jwt_handler",
+        "description": "app.auth.jwt_handler",
+        "peekOfCode": "JWT_ALGORITHM = config('JWT_ALGORITHM')\ndef token_response(token: str):\n    return {\n        'access_token': token\n    }\ndef signJWT(user_id: str):\n    payload = {\n        'user_id': user_id,\n        'expires': time.time() + 600\n    }",
+        "detail": "app.auth.jwt_handler",
+        "documentation": {}
+    },
+    {
+        "label": "PostSchema",
+        "kind": 6,
+        "importPath": "app.schema",
+        "description": "app.schema",
+        "peekOfCode": "class PostSchema(BaseModel):\n    id : int = Field(default=None)\n    title: str = Field(default=None)\n    content: str = Field(default=None)\n    class Config:\n        json_schema_extra = {\n            \"post_demo\":{\n                \"title\":\"some title\",\n                \"content\":\"some content\"\n            }",
+        "detail": "app.schema",
+        "documentation": {}
+    },
+    {
+        "label": "UserSchema",
+        "kind": 6,
+        "importPath": "app.schema",
+        "description": "app.schema",
+        "peekOfCode": "class UserSchema(BaseModel):\n    fullname : str = Field(default=None)\n    email : EmailStr = Field(default=None)\n    password : str = Field(default=None) \n    class Config:\n        json_schema_extra = {\n            \"user_demo\":{\n                \"name\" : \"someone\",\n                \"email\":\"someone@example.com\",\n                \"password\":\"pass123\"",
+        "detail": "app.schema",
+        "documentation": {}
+    },
+    {
+        "label": "UserLoginSchema",
+        "kind": 6,
+        "importPath": "app.schema",
+        "description": "app.schema",
+        "peekOfCode": "class UserLoginSchema(BaseModel):\n    email : EmailStr = Field(default=None)\n    password : str = Field(default=None) \n    class Config:\n        json_schema_extra = {\n            \"user_demo\":{\n                \"email\":\"someone@example.com\",\n                \"password\":\"pass123\"\n            }\n        }",
+        "detail": "app.schema",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class User(BaseModel):\n    username: str\n    password: str\nclass UserInDB(User):\n    hashed_password: str\nclass Blog(BaseModel):\n    title: str\n    content: str\nclass BlogInDB(Blog):\n    author: str",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "UserInDB",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class UserInDB(User):\n    hashed_password: str\nclass Blog(BaseModel):\n    title: str\n    content: str\nclass BlogInDB(Blog):\n    author: str\n# OAuth2PasswordBearer for token handling\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\n# Function to verify user credentials",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Blog",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class Blog(BaseModel):\n    title: str\n    content: str\nclass BlogInDB(Blog):\n    author: str\n# OAuth2PasswordBearer for token handling\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\n# Function to verify user credentials\ndef verify_user(username: str, password: str):\n    user = fake_users_db.get(username)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "BlogInDB",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class BlogInDB(Blog):\n    author: str\n# OAuth2PasswordBearer for token handling\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\n# Function to verify user credentials\ndef verify_user(username: str, password: str):\n    user = fake_users_db.get(username)\n    if user and user.hashed_password == password:\n        return user\n# Function to get current user from token",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "verify_user",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def verify_user(username: str, password: str):\n    user = fake_users_db.get(username)\n    if user and user.hashed_password == password:\n        return user\n# Function to get current user from token\ndef get_current_user(token: str = Depends(oauth2_scheme)):\n    user = verify_user(token, token)\n    if not user:\n        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail=\"Invalid credentials\")\n    return user",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_user",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_current_user(token: str = Depends(oauth2_scheme)):\n    user = verify_user(token, token)\n    if not user:\n        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail=\"Invalid credentials\")\n    return user\n@app.post(\"/signup\")\ndef sign_up(user: User):\n    if user.username in fake_users_db:\n        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=\"Username already registered\")\n    hashed_password = user.password  # In real-world scenario, hash the password securely",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "sign_up",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def sign_up(user: User):\n    if user.username in fake_users_db:\n        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=\"Username already registered\")\n    hashed_password = user.password  # In real-world scenario, hash the password securely\n    fake_users_db[user.username] = UserInDB(**user.dict(), hashed_password=hashed_password)\n    return {\"message\": \"User registered successfully\"}\n@app.post(\"/token\")\ndef login(form_data: OAuth2PasswordRequestForm = Depends()):\n    user = verify_user(form_data.username, form_data.password)\n    if not user:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def login(form_data: OAuth2PasswordRequestForm = Depends()):\n    user = verify_user(form_data.username, form_data.password)\n    if not user:\n        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail=\"Invalid credentials\")\n    return {\"access_token\": user.username, \"token_type\": \"bearer\"}\n@app.post(\"/post\", response_model=Blog)\ndef create_post(blog: Blog, current_user: User = Depends(get_current_user)):\n    new_post = BlogInDB(**blog.dict(), author=current_user.username)\n    fake_blogs_db.append(new_post)\n    return new_post",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "create_post",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def create_post(blog: Blog, current_user: User = Depends(get_current_user)):\n    new_post = BlogInDB(**blog.dict(), author=current_user.username)\n    fake_blogs_db.append(new_post)\n    return new_post\n@app.get(\"/posts\", response_model=List[Blog])\ndef get_posts():\n    return fake_blogs_db",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_posts",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_posts():\n    return fake_blogs_db",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = FastAPI()\n# Simulated database\nfake_users_db = {}\nfake_blogs_db = []\nclass User(BaseModel):\n    username: str\n    password: str\nclass UserInDB(User):\n    hashed_password: str\nclass Blog(BaseModel):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "fake_users_db",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "fake_users_db = {}\nfake_blogs_db = []\nclass User(BaseModel):\n    username: str\n    password: str\nclass UserInDB(User):\n    hashed_password: str\nclass Blog(BaseModel):\n    title: str\n    content: str",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "fake_blogs_db",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "fake_blogs_db = []\nclass User(BaseModel):\n    username: str\n    password: str\nclass UserInDB(User):\n    hashed_password: str\nclass Blog(BaseModel):\n    title: str\n    content: str\nclass BlogInDB(Blog):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "oauth2_scheme",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "oauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\n# Function to verify user credentials\ndef verify_user(username: str, password: str):\n    user = fake_users_db.get(username)\n    if user and user.hashed_password == password:\n        return user\n# Function to get current user from token\ndef get_current_user(token: str = Depends(oauth2_scheme)):\n    user = verify_user(token, token)\n    if not user:",
+        "detail": "main",
+        "documentation": {}
+    }
+]

@@ -12,24 +12,32 @@ class jwt_bearer(HTTPBearer):
     def __init__(self, auto_error: bool = True):
         super(jwt_bearer, self).__init__(auto_error=auto_error)
 
-    async def __call__(self, request : Request):
-        credintials : HTTPAuthorizationCredentials = await super(
-                jwt_bearer, self
-            ).__call__(request)    
-        if credintials:
-            if not credintials.scheme == "Bearer":
+    async def __call__(self, request: Request):
+        credentials: HTTPAuthorizationCredentials = await super(
+            jwt_bearer, self
+        ).__call__(request)
+        
+        if credentials:
+            if not credentials.scheme == "Bearer":
                 raise HTTPException(
                     status_code=403, detail="Invalid authentication scheme"
                 )
-            return credintials.credentials
+            
+            if not self.validate_token(credentials.credentials):
+                raise HTTPException(
+                    status_code=403, detail="Invalid credentials"
+                )
+                
+            return credentials.credentials
         else:
             raise HTTPException(
-                    status_code=403, detail="Invalid credintials"
-                )
-    
+                status_code=403, detail="Invalid credentials"
+            )
+
     def validate_token(self, token: str):
-        isTokenValid : bool = False
-        payload  = decodeJWT(token)
+        payload = decodeJWT(token)
+        isTokenValid = False  # Initialize with False
         if payload:
-            isTokenValid = True
-        return isTokenValid
+            print(payload)
+            isTokenValid = True  # Set to True if payload is not None
+        return isTokenValid  # Return the value, not the comparison
