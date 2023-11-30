@@ -64,39 +64,19 @@ def img_res_base64(img):
         cv2.imencode(".jpg", img)[1].tobytes()
     ).decode()
 
-@app.post("/grayscale")
+@app.post("/grayscale",dependencies=[Depends(jwt_bearer())])
 def grayscale(image: UploadFile = File(...)):
-    # try:
-    #     # storing the original for reading purpose ( for now local folder)
-    #     with open('./img_db/original/or_img.jpg', 'wb') as f:
-    #         f.write(image.file.read())
-
-    #     # processing the image
-    #     image = cv2.imread('./img_db/or_img.jpg')
-       
-    #     # storing the processed image in our database ( for now local folder)
-    #     # cv2.imwrite('./img_db/processed/gs_img.jpg', image)
-        
-    #     # sending back response to user
-    #     return { image : img_res_base64(image)}
-
-    # except Exception as e:
-    #     print(e)
-    #     raise HTTPException(status_code=500, detail=str(e))
     with open('./img_db/original/or_img.jpg', 'wb') as f:
         f.write(image.file.read())
   
     temp_img = cv2.imread('./img_db/original/or_img.jpg')
-    pa_rgb = cv2.addWeighted(temp_img, 4, cv2.GaussianBlur(temp_img, (0, 0), 300/30), -4, 128)
-
-    # for sending to frontned in base64 format
-    pa_rgb_base64 = img_res_base64(pa_rgb)
- 
     img = temp_img
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
+    gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+   
+    gray_base64 = img_res_base64(gray_img)
+  
     return {
-        "grayscale_img": pa_rgb_base64
+        "grayscale_img": gray_base64
     }
 # ===========================================================================================
 # ===========================================================================================

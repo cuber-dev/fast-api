@@ -3,9 +3,9 @@ import { context } from '../App';
 
 function ImageProcess() {
     const { user } = useContext(context);
+    
     const [loggedUser, setLoggedUser] = useState(user);
     const [image,setImage] = useState()
-    // const [grayscaleImage,setGrayscaleImg] = useState()
 
     const inputRef = useRef(null);
     const previewContainerRef = useRef(null);
@@ -39,35 +39,35 @@ function ImageProcess() {
           async function fetchData() {
             try {
               const formData = await getFormData();
-    
               const response = await fetch(url, {
                 method: 'POST',
+                headers: {
+                  'accept': 'application/json',
+                  'Authorization': `Bearer ${user.a_t}`,
+                },
                 body: formData,
               });
-        
+          
               if (!response.ok) {
-                throw new Error('Failed to fetch diagnosis results from the API');
+                throw new Error('Failed to fetch data from the API');
               }
-        
+          
               let data = await response.json();
               console.log(data);
               return data;
             } catch (error) {
-              console.error('Error fetching diagnosis results:', error);
+              console.error('Error fetching data:', error);
               return 'Internal Server Error, please try again later';
             }
           }
+          
 
         function mountGrayscaleImage(data){
             const { grayscale_img } = data;
-            console.log(data)
-
             if (grayscale_img) {
-                console.log(grayscale_img)
                 grayscalePreviewRef.current.src = grayscale_img;
                 grayscaleContainerRef.current.style.display = 'block';
             } 
-
         }
         const data = await fetchData()
         if(data) mountGrayscaleImage(data);
@@ -88,7 +88,7 @@ function ImageProcess() {
         const url = URL.createObjectURL(blob);
       
         a.href = url;
-        a.download = 'image.jpg';
+        a.download = 'grayscale_image.jpg';
         a.click();
       
         // Clean up the URL
@@ -122,7 +122,7 @@ function ImageProcess() {
                         Convert to Grayscale
                     </button>
                 </div>
-                <div className="grayscale-image-container container" ref={grayscaleContainerRef}>
+                <div className="image-preview-container container" ref={grayscaleContainerRef}>
                     <h3>Converted Image Preview</h3>
                     <img alt="image" className="image-preview" ref={grayscalePreviewRef} />
                     <button className="btn" onClick={downloadImage}>Download Image</button>

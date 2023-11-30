@@ -559,7 +559,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def img_res_base64(img):\n    # first base64 format string and second base64 string\n    return \"data:image/jpeg;base64,\" + base64.b64encode(\n        cv2.imencode(\".jpg\", img)[1].tobytes()\n    ).decode()\n@app.post(\"/grayscale\")\ndef grayscale(image: UploadFile = File(...)):\n    # try:\n    #     # storing the original for reading purpose ( for now local folder)\n    #     with open('./img_db/original/or_img.jpg', 'wb') as f:",
+        "peekOfCode": "def img_res_base64(img):\n    # first base64 format string and second base64 string\n    return \"data:image/jpeg;base64,\" + base64.b64encode(\n        cv2.imencode(\".jpg\", img)[1].tobytes()\n    ).decode()\n@app.post(\"/grayscale\",dependencies=[Depends(jwt_bearer())])\ndef grayscale(image: UploadFile = File(...)):\n    with open('./img_db/original/or_img.jpg', 'wb') as f:\n        f.write(image.file.read())\n    temp_img = cv2.imread('./img_db/original/or_img.jpg')",
         "detail": "main",
         "documentation": {}
     },
@@ -568,7 +568,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def grayscale(image: UploadFile = File(...)):\n    # try:\n    #     # storing the original for reading purpose ( for now local folder)\n    #     with open('./img_db/original/or_img.jpg', 'wb') as f:\n    #         f.write(image.file.read())\n    #     # processing the image\n    #     image = cv2.imread('./img_db/or_img.jpg')\n    #     # storing the processed image in our database ( for now local folder)\n    #     # cv2.imwrite('./img_db/processed/gs_img.jpg', image)\n    #     # sending back response to user",
+        "peekOfCode": "def grayscale(image: UploadFile = File(...)):\n    with open('./img_db/original/or_img.jpg', 'wb') as f:\n        f.write(image.file.read())\n    temp_img = cv2.imread('./img_db/original/or_img.jpg')\n    img = temp_img\n    gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)\n    gray_base64 = img_res_base64(gray_img)\n    return {\n        \"grayscale_img\": gray_base64\n    }",
         "detail": "main",
         "documentation": {}
     },
