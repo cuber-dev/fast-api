@@ -50,10 +50,8 @@ function Login() {
                 <form id="login-form">
                     <label htmlFor="email">Email:</label>
                     <input type="text" id="email" name="email" ref={emailRef} required />
-                    <br />
                     <label htmlFor="password">Password:</label>
                     <input type="password" id="password" name="password" ref={passwordRef} required />
-                    <br />
                     <button type="button" onClick={login}>Login</button>
                 </form>
             </div>

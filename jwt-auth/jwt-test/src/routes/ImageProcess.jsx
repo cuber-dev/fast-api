@@ -21,7 +21,9 @@ function ImageProcess() {
 
             reader.onload = function (e) {
                 previewRef.current.src = e.target.result;
-                previewContainerRef.current.style.display = 'block';
+                previewContainerRef.current.style.pointerEvents = 'visible';
+                previewContainerRef.current.style.opacity = 1;
+
             };
 
             reader.readAsDataURL(file);
@@ -66,7 +68,9 @@ function ImageProcess() {
             const { grayscale_img } = data;
             if (grayscale_img) {
                 grayscalePreviewRef.current.src = grayscale_img;
-                grayscaleContainerRef.current.style.display = 'block';
+                grayscaleContainerRef.current.style.pointerEvents = 'visible';
+                grayscaleContainerRef.current.style.opacity = 1;
+
             } 
         }
         const data = await fetchData()
@@ -106,18 +110,19 @@ function ImageProcess() {
     return (
         <>
             <div className="user-details">
-                <h1>User name: {loggedUser.name}</h1>
+                <h1>Email: {loggedUser.name}</h1>
                 <p>You are logged in, now you can use our software.</p>
             </div>
             <div className="upload-container" id="upload-container">
-                <h2>Upload Image</h2>
+                <h2>Convert Image to Grayscale Image.</h2>
                 <input type="file" id="image-input" accept="image/*" ref={inputRef} onChange={uploadImage} style={{ display: 'none' }} />
-                <label htmlFor='image-input' className='btn' >Upload Image</label>
+                <label htmlFor='image-input' className='upload-btn btn' >Upload Image</label>
 
+                <div className="inline-container">
                 <div id="image-preview-container container" className='image-preview-container' ref={previewContainerRef}>
-                    <h3>Image Preview</h3>
+                    <h3>Uploaded Image Preview</h3>
                     <img className="image-preview" alt="Image Preview" ref={previewRef} />
-                    <br />
+                    
                     <button type="button" onClick={convertToGrayscale} className='btn'>
                         Convert to Grayscale
                     </button>
@@ -125,7 +130,9 @@ function ImageProcess() {
                 <div className="image-preview-container container" ref={grayscaleContainerRef}>
                     <h3>Converted Image Preview</h3>
                     <img alt="image" className="image-preview" ref={grayscalePreviewRef} />
+                    
                     <button className="btn" onClick={downloadImage}>Download Image</button>
+                </div>
                 </div>
             </div>
         </>
