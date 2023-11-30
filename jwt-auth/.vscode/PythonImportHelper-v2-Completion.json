@@ -88,14 +88,6 @@
         "documentation": {}
     },
     {
-        "label": "Cookie",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
         "label": "HTTPBearer",
         "importPath": "fastapi.security",
         "description": "fastapi.security",
@@ -105,14 +97,6 @@
     },
     {
         "label": "HTTPAuthorizationCredentials",
-        "importPath": "fastapi.security",
-        "description": "fastapi.security",
-        "isExtraImport": true,
-        "detail": "fastapi.security",
-        "documentation": {}
-    },
-    {
-        "label": "OAuth2PasswordBearer",
         "importPath": "fastapi.security",
         "description": "fastapi.security",
         "isExtraImport": true,
@@ -195,30 +179,12 @@
         "documentation": {}
     },
     {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
-        "documentation": {}
-    },
-    {
         "label": "cv2",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "cv2",
         "description": "cv2",
         "detail": "cv2",
-        "documentation": {}
-    },
-    {
-        "label": "numpy",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "numpy",
-        "description": "numpy",
-        "detail": "numpy",
         "documentation": {}
     },
     {
@@ -231,27 +197,11 @@
         "documentation": {}
     },
     {
-        "label": "StaticFiles",
-        "importPath": "fastapi.staticfiles",
-        "description": "fastapi.staticfiles",
-        "isExtraImport": true,
-        "detail": "fastapi.staticfiles",
-        "documentation": {}
-    },
-    {
         "label": "CORSMiddleware",
         "importPath": "fastapi.middleware.cors",
         "description": "fastapi.middleware.cors",
         "isExtraImport": true,
         "detail": "fastapi.middleware.cors",
-        "documentation": {}
-    },
-    {
-        "label": "JSONResponse",
-        "importPath": "fastapi.responses",
-        "description": "fastapi.responses",
-        "isExtraImport": true,
-        "detail": "fastapi.responses",
         "documentation": {}
     },
     {

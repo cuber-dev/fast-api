@@ -1,14 +1,9 @@
-import os
 import cv2 
-import numpy as np
 import base64
 
 from fastapi import FastAPI, Body, Depends, File ,HTTPException, UploadFile
-from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi import FastAPI, HTTPException, Depends, Cookie
-from fastapi.security import OAuth2PasswordBearer
-from fastapi.responses import JSONResponse
+from fastapi import FastAPI, HTTPException, Depends
 
 from app.schema import PostSchema , UserSchema , UserLoginSchema
 from app.auth.jwt_handler import signJWT

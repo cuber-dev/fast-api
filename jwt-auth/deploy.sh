@@ -1,3 +1,3 @@
 git add .
-git commit -m "sssd"
+git commit -m "new-deploy-commit"
 git push
