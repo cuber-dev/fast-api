@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.login-container, .upload-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.upload-container .image-preview-container{
+  display: none;
+}
+.btn,button {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover,button:hover {
+  background-color: #45a049;
+}
+
+#image-preview {
+  max-width: 100%;
+  max-height: 300px;
+}
+#image-input{ display: none;}

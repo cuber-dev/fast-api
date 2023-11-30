@@ -7,9 +7,10 @@ from decouple import config
 JWT_SECRET = config('JWT_SECRET')
 JWT_ALGORITHM = config('JWT_ALGORITHM')
 
-def token_response(token: str):
+def token_response(token: str,user_id : str):
     return {
-        'access_token': token
+        'access_token': token,
+        'email' : user_id
     }
 
 def signJWT(user_id: str):
@@ -19,7 +20,7 @@ def signJWT(user_id: str):
     }
     token = jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)
 
-    return token_response(token)
+    return token_response(token,user_id)
 
 def decodeJWT(token: str):
     try:

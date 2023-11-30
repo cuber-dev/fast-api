@@ -24,7 +24,23 @@
         "documentation": {}
     },
     {
+        "label": "Body",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "File",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -40,7 +56,39 @@
         "documentation": {}
     },
     {
-        "label": "status",
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Cookie",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -65,14 +113,6 @@
     },
     {
         "label": "OAuth2PasswordBearer",
-        "importPath": "fastapi.security",
-        "description": "fastapi.security",
-        "isExtraImport": true,
-        "detail": "fastapi.security",
-        "documentation": {}
-    },
-    {
-        "label": "OAuth2PasswordRequestForm",
         "importPath": "fastapi.security",
         "description": "fastapi.security",
         "isExtraImport": true,
@@ -130,19 +170,136 @@
         "documentation": {}
     },
     {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
+        "label": "json",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "pydantic",
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
         "documentation": {}
     },
     {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
+        "label": "stringify",
+        "importPath": "flatted",
+        "description": "flatted",
         "isExtraImport": true,
-        "detail": "typing",
+        "detail": "flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "importPath": "flatted",
+        "description": "flatted",
+        "isExtraImport": true,
+        "detail": "flatted",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "StaticFiles",
+        "importPath": "fastapi.staticfiles",
+        "description": "fastapi.staticfiles",
+        "isExtraImport": true,
+        "detail": "fastapi.staticfiles",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "PostSchema",
+        "importPath": "app.schema",
+        "description": "app.schema",
+        "isExtraImport": true,
+        "detail": "app.schema",
+        "documentation": {}
+    },
+    {
+        "label": "UserSchema",
+        "importPath": "app.schema",
+        "description": "app.schema",
+        "isExtraImport": true,
+        "detail": "app.schema",
+        "documentation": {}
+    },
+    {
+        "label": "UserLoginSchema",
+        "importPath": "app.schema",
+        "description": "app.schema",
+        "isExtraImport": true,
+        "detail": "app.schema",
+        "documentation": {}
+    },
+    {
+        "label": "signJWT",
+        "importPath": "app.auth.jwt_handler",
+        "description": "app.auth.jwt_handler",
+        "isExtraImport": true,
+        "detail": "app.auth.jwt_handler",
+        "documentation": {}
+    },
+    {
+        "label": "jwt_bearer",
+        "importPath": "app.auth.jwt_bearer",
+        "description": "app.auth.jwt_bearer",
+        "isExtraImport": true,
+        "detail": "app.auth.jwt_bearer",
+        "documentation": {}
+    },
+    {
+        "label": "FileResponse",
+        "importPath": "starlette.responses",
+        "description": "starlette.responses",
+        "isExtraImport": true,
+        "detail": "starlette.responses",
         "documentation": {}
     },
     {
@@ -159,7 +316,7 @@
         "kind": 2,
         "importPath": "app.auth.jwt_handler",
         "description": "app.auth.jwt_handler",
-        "peekOfCode": "def token_response(token: str):\n    return {\n        'access_token': token\n    }\ndef signJWT(user_id: str):\n    payload = {\n        'user_id': user_id,\n        'expires': time.time() + 600\n    }\n    token = jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)",
+        "peekOfCode": "def token_response(token: str,user_id : str):\n    return {\n        'access_token': token,\n        'email' : user_id\n    }\ndef signJWT(user_id: str):\n    payload = {\n        'user_id': user_id,\n        'expires': time.time() + 600\n    }",
         "detail": "app.auth.jwt_handler",
         "documentation": {}
     },
@@ -168,7 +325,7 @@
         "kind": 2,
         "importPath": "app.auth.jwt_handler",
         "description": "app.auth.jwt_handler",
-        "peekOfCode": "def signJWT(user_id: str):\n    payload = {\n        'user_id': user_id,\n        'expires': time.time() + 600\n    }\n    token = jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)\n    return token_response(token)\ndef decodeJWT(token: str):\n    try:\n        decode_token = jwt.decode(token,JWT_SECRET,algorithm=JWT_ALGORITHM)",
+        "peekOfCode": "def signJWT(user_id: str):\n    payload = {\n        'user_id': user_id,\n        'expires': time.time() + 600\n    }\n    token = jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)\n    return token_response(token,user_id)\ndef decodeJWT(token: str):\n    try:\n        decode_token = jwt.decode(token,JWT_SECRET,algorithm=JWT_ALGORITHM)",
         "detail": "app.auth.jwt_handler",
         "documentation": {}
     },
@@ -186,7 +343,7 @@
         "kind": 5,
         "importPath": "app.auth.jwt_handler",
         "description": "app.auth.jwt_handler",
-        "peekOfCode": "JWT_SECRET = config('JWT_SECRET')\nJWT_ALGORITHM = config('JWT_ALGORITHM')\ndef token_response(token: str):\n    return {\n        'access_token': token\n    }\ndef signJWT(user_id: str):\n    payload = {\n        'user_id': user_id,\n        'expires': time.time() + 600",
+        "peekOfCode": "JWT_SECRET = config('JWT_SECRET')\nJWT_ALGORITHM = config('JWT_ALGORITHM')\ndef token_response(token: str,user_id : str):\n    return {\n        'access_token': token,\n        'email' : user_id\n    }\ndef signJWT(user_id: str):\n    payload = {\n        'user_id': user_id,",
         "detail": "app.auth.jwt_handler",
         "documentation": {}
     },
@@ -195,7 +352,7 @@
         "kind": 5,
         "importPath": "app.auth.jwt_handler",
         "description": "app.auth.jwt_handler",
-        "peekOfCode": "JWT_ALGORITHM = config('JWT_ALGORITHM')\ndef token_response(token: str):\n    return {\n        'access_token': token\n    }\ndef signJWT(user_id: str):\n    payload = {\n        'user_id': user_id,\n        'expires': time.time() + 600\n    }",
+        "peekOfCode": "JWT_ALGORITHM = config('JWT_ALGORITHM')\ndef token_response(token: str,user_id : str):\n    return {\n        'access_token': token,\n        'email' : user_id\n    }\ndef signJWT(user_id: str):\n    payload = {\n        'user_id': user_id,\n        'expires': time.time() + 600",
         "detail": "app.auth.jwt_handler",
         "documentation": {}
     },
@@ -227,92 +384,209 @@
         "documentation": {}
     },
     {
-        "label": "User",
+        "label": "_Known",
         "kind": 6,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "class User(BaseModel):\n    username: str\n    password: str\nclass UserInDB(User):\n    hashed_password: str\nclass Blog(BaseModel):\n    title: str\n    content: str\nclass BlogInDB(Blog):\n    author: str",
-        "detail": "main",
+        "importPath": "jwt-test.node_modules.flatted.python.flatted",
+        "description": "jwt-test.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _Known:\n    def __init__(self):\n        self.key = []\n        self.value = []\nclass _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0",
+        "detail": "jwt-test.node_modules.flatted.python.flatted",
         "documentation": {}
     },
     {
-        "label": "UserInDB",
+        "label": "_String",
         "kind": 6,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "class UserInDB(User):\n    hashed_password: str\nclass Blog(BaseModel):\n    title: str\n    content: str\nclass BlogInDB(Blog):\n    author: str\n# OAuth2PasswordBearer for token handling\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\n# Function to verify user credentials",
-        "detail": "main",
+        "importPath": "jwt-test.node_modules.flatted.python.flatted",
+        "description": "jwt-test.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0\n    for _ in value:\n        keys.append(i)\n        i += 1\n    return keys",
+        "detail": "jwt-test.node_modules.flatted.python.flatted",
         "documentation": {}
     },
     {
-        "label": "Blog",
-        "kind": 6,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "class Blog(BaseModel):\n    title: str\n    content: str\nclass BlogInDB(Blog):\n    author: str\n# OAuth2PasswordBearer for token handling\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\n# Function to verify user credentials\ndef verify_user(username: str, password: str):\n    user = fake_users_db.get(username)",
-        "detail": "main",
+        "label": "parse",
+        "kind": 2,
+        "importPath": "jwt-test.node_modules.flatted.python.flatted",
+        "description": "jwt-test.node_modules.flatted.python.flatted",
+        "peekOfCode": "def parse(value, *args, **kwargs):\n    json = _json.loads(value, *args, **kwargs)\n    wrapped = []\n    for value in json:\n        wrapped.append(_wrap(value))\n    input = []\n    for value in wrapped:\n        if isinstance(value, _String):\n            input.append(value.value)\n        else:",
+        "detail": "jwt-test.node_modules.flatted.python.flatted",
         "documentation": {}
     },
     {
-        "label": "BlogInDB",
-        "kind": 6,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "class BlogInDB(Blog):\n    author: str\n# OAuth2PasswordBearer for token handling\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\n# Function to verify user credentials\ndef verify_user(username: str, password: str):\n    user = fake_users_db.get(username)\n    if user and user.hashed_password == password:\n        return user\n# Function to get current user from token",
-        "detail": "main",
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "jwt-test.node_modules.flatted.python.flatted",
+        "description": "jwt-test.node_modules.flatted.python.flatted",
+        "peekOfCode": "def stringify(value, *args, **kwargs):\n    known = _Known()\n    input = []\n    output = []\n    i = int(_index(known, input, value))\n    while i < len(input):\n        output.append(_transform(known, input, input[i]))\n        i += 1\n    return _json.dumps(output, *args, **kwargs)",
+        "detail": "jwt-test.node_modules.flatted.python.flatted",
         "documentation": {}
     },
     {
-        "label": "verify_user",
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "jwt-test.node_modules.flatted.python.test",
+        "description": "jwt-test.node_modules.flatted.python.test",
+        "peekOfCode": "def stringify(value):\n    return _stringify(value, separators=(',', ':'))\nassert stringify([None, None]) == '[[null,null]]'\na = []\no = {}\nassert stringify(a) == '[[]]'\nassert stringify(o) == '[{}]'\na.append(a)\no['o'] = o\nassert stringify(a) == '[[\"0\"]]'",
+        "detail": "jwt-test.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "jwt-test.node_modules.flatted.python.test",
+        "description": "jwt-test.node_modules.flatted.python.test",
+        "peekOfCode": "a = []\no = {}\nassert stringify(a) == '[[]]'\nassert stringify(o) == '[{}]'\na.append(a)\no['o'] = o\nassert stringify(a) == '[[\"0\"]]'\nassert stringify(o) == '[{\"o\":\"0\"}]'\nb = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b",
+        "detail": "jwt-test.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o",
+        "kind": 5,
+        "importPath": "jwt-test.node_modules.flatted.python.test",
+        "description": "jwt-test.node_modules.flatted.python.test",
+        "peekOfCode": "o = {}\nassert stringify(a) == '[[]]'\nassert stringify(o) == '[{}]'\na.append(a)\no['o'] = o\nassert stringify(a) == '[[\"0\"]]'\nassert stringify(o) == '[{\"o\":\"0\"}]'\nb = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b\na.append(1)",
+        "detail": "jwt-test.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['o']",
+        "kind": 5,
+        "importPath": "jwt-test.node_modules.flatted.python.test",
+        "description": "jwt-test.node_modules.flatted.python.test",
+        "peekOfCode": "o['o'] = o\nassert stringify(a) == '[[\"0\"]]'\nassert stringify(o) == '[{\"o\":\"0\"}]'\nb = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b\na.append(1)\na.append('two')\na.append(True)\no['one'] = 1\no['two'] = 'two'",
+        "detail": "jwt-test.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "b",
+        "kind": 5,
+        "importPath": "jwt-test.node_modules.flatted.python.test",
+        "description": "jwt-test.node_modules.flatted.python.test",
+        "peekOfCode": "b = parse(stringify(a))\nassert isinstance(b, list) and b[0] == b\na.append(1)\na.append('two')\na.append(True)\no['one'] = 1\no['two'] = 'two'\no['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'",
+        "detail": "jwt-test.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['one']",
+        "kind": 5,
+        "importPath": "jwt-test.node_modules.flatted.python.test",
+        "description": "jwt-test.node_modules.flatted.python.test",
+        "peekOfCode": "o['one'] = 1\no['two'] = 'two'\no['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'\na.append(o)\no['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})",
+        "detail": "jwt-test.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['two']",
+        "kind": 5,
+        "importPath": "jwt-test.node_modules.flatted.python.test",
+        "description": "jwt-test.node_modules.flatted.python.test",
+        "peekOfCode": "o['two'] = 'two'\no['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'\na.append(o)\no['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})\na.append([1, 2, 3])",
+        "detail": "jwt-test.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['three']",
+        "kind": 5,
+        "importPath": "jwt-test.node_modules.flatted.python.test",
+        "description": "jwt-test.node_modules.flatted.python.test",
+        "peekOfCode": "o['three'] = True\nassert stringify(a) == '[[\"0\",1,\"1\",true],\"two\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true},\"two\"]'\na.append(o)\no['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})\na.append([1, 2, 3])\no['test'] = {'test': 'OK'}",
+        "detail": "jwt-test.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['a']",
+        "kind": 5,
+        "importPath": "jwt-test.node_modules.flatted.python.test",
+        "description": "jwt-test.node_modules.flatted.python.test",
+        "peekOfCode": "o['a'] = a\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\"}]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\"},\"two\",[\"2\",1,\"1\",true,\"0\"]]'\na.append({'test': 'OK'})\na.append([1, 2, 3])\no['test'] = {'test': 'OK'}\no['array'] = [1, 2, 3]\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\",\"3\",\"4\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\",\"test\":\"3\",\"array\":\"4\"},{\"test\":\"5\"},[1,2,3],\"OK\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\",\"test\":\"3\",\"array\":\"4\"},\"two\",[\"2\",1,\"1\",true,\"0\",\"3\",\"4\"],{\"test\":\"5\"},[1,2,3],\"OK\"]'\na2 = parse(stringify(a));",
+        "detail": "jwt-test.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['test']",
+        "kind": 5,
+        "importPath": "jwt-test.node_modules.flatted.python.test",
+        "description": "jwt-test.node_modules.flatted.python.test",
+        "peekOfCode": "o['test'] = {'test': 'OK'}\no['array'] = [1, 2, 3]\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\",\"3\",\"4\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\",\"test\":\"3\",\"array\":\"4\"},{\"test\":\"5\"},[1,2,3],\"OK\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\",\"test\":\"3\",\"array\":\"4\"},\"two\",[\"2\",1,\"1\",true,\"0\",\"3\",\"4\"],{\"test\":\"5\"},[1,2,3],\"OK\"]'\na2 = parse(stringify(a));\no2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']",
+        "detail": "jwt-test.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o['array']",
+        "kind": 5,
+        "importPath": "jwt-test.node_modules.flatted.python.test",
+        "description": "jwt-test.node_modules.flatted.python.test",
+        "peekOfCode": "o['array'] = [1, 2, 3]\nassert stringify(a) == '[[\"0\",1,\"1\",true,\"2\",\"3\",\"4\"],\"two\",{\"o\":\"2\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"0\",\"test\":\"3\",\"array\":\"4\"},{\"test\":\"5\"},[1,2,3],\"OK\"]'\nassert stringify(o) == '[{\"o\":\"0\",\"one\":1,\"two\":\"1\",\"three\":true,\"a\":\"2\",\"test\":\"3\",\"array\":\"4\"},\"two\",[\"2\",1,\"1\",true,\"0\",\"3\",\"4\"],{\"test\":\"5\"},[1,2,3],\"OK\"]'\na2 = parse(stringify(a));\no2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']\nstr = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')",
+        "detail": "jwt-test.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "a2",
+        "kind": 5,
+        "importPath": "jwt-test.node_modules.flatted.python.test",
+        "description": "jwt-test.node_modules.flatted.python.test",
+        "peekOfCode": "a2 = parse(stringify(a));\no2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']\nstr = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')\nassert str['b']['t']['a'] == 'sup' and str['a'][1]['b'][0]['c'] == str['b']['t']\noo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']",
+        "detail": "jwt-test.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "o2",
+        "kind": 5,
+        "importPath": "jwt-test.node_modules.flatted.python.test",
+        "description": "jwt-test.node_modules.flatted.python.test",
+        "peekOfCode": "o2 = parse(stringify(o));\nassert a2[0] == a2\nassert o2['o'] == o2\nassert a2[1] == 1 and a2[2] == 'two' and a2[3] == True and isinstance(a2[4], dict)\nassert a2[4] == a2[4]['o'] and a2 == a2[4]['o']['a']\nstr = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')\nassert str['b']['t']['a'] == 'sup' and str['a'][1]['b'][0]['c'] == str['b']['t']\noo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']\nprint('OK')",
+        "detail": "jwt-test.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "str",
+        "kind": 5,
+        "importPath": "jwt-test.node_modules.flatted.python.test",
+        "description": "jwt-test.node_modules.flatted.python.test",
+        "peekOfCode": "str = parse('[{\"prop\":\"1\",\"a\":\"2\",\"b\":\"3\"},{\"value\":123},[\"4\",\"5\"],{\"e\":\"6\",\"t\":\"7\",\"p\":4},{},{\"b\":\"8\"},\"f\",{\"a\":\"9\"},[\"10\"],\"sup\",{\"a\":1,\"d\":2,\"c\":\"7\",\"z\":\"11\",\"h\":1},{\"g\":2,\"a\":\"7\",\"b\":\"12\",\"f\":6},{\"r\":4,\"u\":\"7\",\"c\":5}]')\nassert str['b']['t']['a'] == 'sup' and str['a'][1]['b'][0]['c'] == str['b']['t']\noo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']\nprint('OK')",
+        "detail": "jwt-test.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "oo",
+        "kind": 5,
+        "importPath": "jwt-test.node_modules.flatted.python.test",
+        "description": "jwt-test.node_modules.flatted.python.test",
+        "peekOfCode": "oo = parse('[{\"a\":\"1\",\"b\":\"0\",\"c\":\"2\"},{\"aa\":\"3\"},{\"ca\":\"4\",\"cb\":\"5\",\"cc\":\"6\",\"cd\":\"7\",\"ce\":\"8\",\"cf\":\"9\"},{\"aaa\":\"10\"},{\"caa\":\"4\"},{\"cba\":\"5\"},{\"cca\":\"2\"},{\"cda\":\"4\"},\"value2\",\"value3\",\"value1\"]');\nassert oo['a']['aa']['aaa'] == 'value1' and oo == oo['b'] and oo['c']['ca']['caa'] == oo['c']['ca']\nprint('OK')",
+        "detail": "jwt-test.node_modules.flatted.python.test",
+        "documentation": {}
+    },
+    {
+        "label": "img_res_base64",
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def verify_user(username: str, password: str):\n    user = fake_users_db.get(username)\n    if user and user.hashed_password == password:\n        return user\n# Function to get current user from token\ndef get_current_user(token: str = Depends(oauth2_scheme)):\n    user = verify_user(token, token)\n    if not user:\n        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail=\"Invalid credentials\")\n    return user",
+        "peekOfCode": "def img_res_base64(img):\n    # first base64 format string and second base64 string\n    return \"data:image/jpeg;base64,\" + base64.b64encode(\n        cv2.imencode(\".jpg\", img)[1].tobytes()\n    ).decode()\n@app.post(\"/grayscale\")\ndef grayscale(image: UploadFile = File(...)):\n    # try:\n    #     # storing the original for reading purpose ( for now local folder)\n    #     with open('./img_db/original/or_img.jpg', 'wb') as f:",
         "detail": "main",
         "documentation": {}
     },
     {
-        "label": "get_current_user",
+        "label": "grayscale",
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def get_current_user(token: str = Depends(oauth2_scheme)):\n    user = verify_user(token, token)\n    if not user:\n        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail=\"Invalid credentials\")\n    return user\n@app.post(\"/signup\")\ndef sign_up(user: User):\n    if user.username in fake_users_db:\n        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=\"Username already registered\")\n    hashed_password = user.password  # In real-world scenario, hash the password securely",
+        "peekOfCode": "def grayscale(image: UploadFile = File(...)):\n    # try:\n    #     # storing the original for reading purpose ( for now local folder)\n    #     with open('./img_db/original/or_img.jpg', 'wb') as f:\n    #         f.write(image.file.read())\n    #     # processing the image\n    #     image = cv2.imread('./img_db/or_img.jpg')\n    #     # storing the processed image in our database ( for now local folder)\n    #     # cv2.imwrite('./img_db/processed/gs_img.jpg', image)\n    #     # sending back response to user",
         "detail": "main",
         "documentation": {}
     },
     {
-        "label": "sign_up",
+        "label": "validate_user",
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def sign_up(user: User):\n    if user.username in fake_users_db:\n        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=\"Username already registered\")\n    hashed_password = user.password  # In real-world scenario, hash the password securely\n    fake_users_db[user.username] = UserInDB(**user.dict(), hashed_password=hashed_password)\n    return {\"message\": \"User registered successfully\"}\n@app.post(\"/token\")\ndef login(form_data: OAuth2PasswordRequestForm = Depends()):\n    user = verify_user(form_data.username, form_data.password)\n    if not user:",
+        "peekOfCode": "def validate_user(data : UserLoginSchema):\n    for user in users:\n        if user[\"email\"] == data.email and user[\"password\"] == data.password:\n            print(user)\n            return True\n    return False\n@app.get(\"/\")\ndef read_root():\n    return { \"msg\" : \"server is running!\"}\n#     index_path = os.path.join(\"./public\", \"index.html\")",
         "detail": "main",
         "documentation": {}
     },
     {
-        "label": "login",
+        "label": "read_root",
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def login(form_data: OAuth2PasswordRequestForm = Depends()):\n    user = verify_user(form_data.username, form_data.password)\n    if not user:\n        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail=\"Invalid credentials\")\n    return {\"access_token\": user.username, \"token_type\": \"bearer\"}\n@app.post(\"/post\", response_model=Blog)\ndef create_post(blog: Blog, current_user: User = Depends(get_current_user)):\n    new_post = BlogInDB(**blog.dict(), author=current_user.username)\n    fake_blogs_db.append(new_post)\n    return new_post",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "create_post",
-        "kind": 2,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "def create_post(blog: Blog, current_user: User = Depends(get_current_user)):\n    new_post = BlogInDB(**blog.dict(), author=current_user.username)\n    fake_blogs_db.append(new_post)\n    return new_post\n@app.get(\"/posts\", response_model=List[Blog])\ndef get_posts():\n    return fake_blogs_db",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "get_posts",
-        "kind": 2,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "def get_posts():\n    return fake_blogs_db",
+        "peekOfCode": "def read_root():\n    return { \"msg\" : \"server is running!\"}\n#     index_path = os.path.join(\"./public\", \"index.html\")\n#     return FileResponse(index_path)\n# app.mount(\"/\", StaticFiles(directory=\"./public\"), name=\"static\")",
         "detail": "main",
         "documentation": {}
     },
@@ -321,34 +595,34 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI()\n# Simulated database\nfake_users_db = {}\nfake_blogs_db = []\nclass User(BaseModel):\n    username: str\n    password: str\nclass UserInDB(User):\n    hashed_password: str\nclass Blog(BaseModel):",
+        "peekOfCode": "app = FastAPI()\n# CORS (Cross-Origin Resource Sharing) middleware settings\norigins = [\"http://localhost\", \"https://localhost\"]  # Add your frontend origins here\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=\"*\",\n    allow_credentials=True,\n    allow_methods=[\"*\"], \n    allow_headers=[\"*\"], \n)",
         "detail": "main",
         "documentation": {}
     },
     {
-        "label": "fake_users_db",
+        "label": "origins",
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "fake_users_db = {}\nfake_blogs_db = []\nclass User(BaseModel):\n    username: str\n    password: str\nclass UserInDB(User):\n    hashed_password: str\nclass Blog(BaseModel):\n    title: str\n    content: str",
+        "peekOfCode": "origins = [\"http://localhost\", \"https://localhost\"]  # Add your frontend origins here\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=\"*\",\n    allow_credentials=True,\n    allow_methods=[\"*\"], \n    allow_headers=[\"*\"], \n)\nusers = [\n    {",
         "detail": "main",
         "documentation": {}
     },
     {
-        "label": "fake_blogs_db",
+        "label": "users",
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "fake_blogs_db = []\nclass User(BaseModel):\n    username: str\n    password: str\nclass UserInDB(User):\n    hashed_password: str\nclass Blog(BaseModel):\n    title: str\n    content: str\nclass BlogInDB(Blog):",
+        "peekOfCode": "users = [\n    {\n        \"email\" : \"marcus9@gmail.com\",\n        \"password\" : \"123\"\n    }\n]\nposts = [\n    {\n        \"id\": 1,\n        \"title\": \"First post\",",
         "detail": "main",
         "documentation": {}
     },
     {
-        "label": "oauth2_scheme",
+        "label": "posts",
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "oauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\n# Function to verify user credentials\ndef verify_user(username: str, password: str):\n    user = fake_users_db.get(username)\n    if user and user.hashed_password == password:\n        return user\n# Function to get current user from token\ndef get_current_user(token: str = Depends(oauth2_scheme)):\n    user = verify_user(token, token)\n    if not user:",
+        "peekOfCode": "posts = [\n    {\n        \"id\": 1,\n        \"title\": \"First post\",\n        \"content\": \"This is the first post\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Second post\",\n        \"content\": \"This is the second post\"",
         "detail": "main",
         "documentation": {}
     }
