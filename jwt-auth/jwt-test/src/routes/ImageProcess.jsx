@@ -28,7 +28,7 @@ function ImageProcess() {
         }
     }
 
-    function convertToGrayscale() {
+    async function convertToGrayscale() {
         const url = `http://127.0.0.1:8000/grayscale`
         async function getFormData() {  
             const formData = new FormData();
@@ -60,28 +60,41 @@ function ImageProcess() {
 
         function mountGrayscaleImage(data){
             const { grayscale_img } = data;
+            console.log(data)
+
             if (grayscale_img) {
-                const image = new Image();
-    
-                image.onload = function (e) {
-                    grayscalePreviewRef.current.src = e.target.result;
-                    grayscaleContainerRef.current.style.display = 'block';
-                };
-    
-                image.readAsDataURL(grayscale_img);
-            }
+                console.log(grayscale_img)
+                grayscalePreviewRef.current.src = grayscale_img;
+                grayscaleContainerRef.current.style.display = 'block';
+            } 
 
         }
-        const data = fetchData()
+        const data = await fetchData()
         if(data) mountGrayscaleImage(data);
     }
-    function downloadImage(){
-        const a = document.querySelector('a')
-        const url = URL.createObjectURL(grayscalePreviewRef.current)
+    function downloadImage() {
+        const a = document.createElement('a');
+      
+        // Convert base64 to Blob
+        const byteCharacters = atob(grayscalePreviewRef.current.src.split(',')[1]);
+        const byteNumbers = new Array(byteCharacters.length);
+        for (let i = 0; i < byteCharacters.length; i++) {
+          byteNumbers[i] = byteCharacters.charCodeAt(i);
+        }
+        const byteArray = new Uint8Array(byteNumbers);
+        const blob = new Blob([byteArray], { type: 'image/jpeg' });
+      
+        // Create a blob URL
+        const url = URL.createObjectURL(blob);
+      
         a.href = url;
-        a.download = 'image.jpg'
-        a.click()
-    }
+        a.download = 'image.jpg';
+        a.click();
+      
+        // Clean up the URL
+        URL.revokeObjectURL(url);
+      }
+      
     useEffect(() => {
         if(!user.email && !user.a_t){
             alert('unauthorized , please login first!')
@@ -99,17 +112,17 @@ function ImageProcess() {
             <div className="upload-container" id="upload-container">
                 <h2>Upload Image</h2>
                 <input type="file" id="image-input" accept="image/*" ref={inputRef} onChange={uploadImage} style={{ display: 'none' }} />
-                <label htmlFor='image-input' className='btn' onClick={() => inputRef.current.click()}>Upload Image</label>
+                <label htmlFor='image-input' className='btn' >Upload Image</label>
 
-                <div id="image-preview-container" className='image-preview-container' ref={previewContainerRef}>
+                <div id="image-preview-container container" className='image-preview-container' ref={previewContainerRef}>
                     <h3>Image Preview</h3>
-                    <img id="image-preview" alt="Image Preview" ref={previewRef} />
+                    <img className="image-preview" alt="Image Preview" ref={previewRef} />
                     <br />
                     <button type="button" onClick={convertToGrayscale} className='btn'>
                         Convert to Grayscale
                     </button>
                 </div>
-                <div className="grayscale-image-container" ref={grayscaleContainerRef}>
+                <div className="grayscale-image-container container" ref={grayscaleContainerRef}>
                     <h3>Converted Image Preview</h3>
                     <img alt="image" className="image-preview" ref={grayscalePreviewRef} />
                     <button className="btn" onClick={downloadImage}>Download Image</button>

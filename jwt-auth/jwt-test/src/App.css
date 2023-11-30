@@ -28,7 +28,7 @@ body {
   background-color: #45a049;
 }
 
-#image-preview {
+.image-preview {
   max-width: 100%;
   max-height: 300px;
 }
