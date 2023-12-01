@@ -25,7 +25,7 @@ function Login() {
         })
             .then(res => res.json())
             .then(data => handleJWT(data))
-            .catch(e => console.log(e));
+            .catch(e => alert(e.detail));
     }
 
     function handleJWT(data) {
@@ -39,7 +39,7 @@ function Login() {
                 imageLinkRef.current.click();
             }, 1000);
         } else {
-            alert('Invalid credentials!');
+            alert(data.detail);
             sessionStorage.removeItem("authenticated_user")
             cookies.remove("test_user")
             window.location.reload();

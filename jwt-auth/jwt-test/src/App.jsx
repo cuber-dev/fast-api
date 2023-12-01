@@ -41,7 +41,7 @@ function App() {
         }else{
           sessionStorage.removeItem("authenticated_user")
           cookies.remove("test_user")
-          alert('Unauthorized, please login first!');
+          alert(data.detail);
           if(window.location.pathname == '/img-grayscale') window.location.href = '/';
           return false;
         }

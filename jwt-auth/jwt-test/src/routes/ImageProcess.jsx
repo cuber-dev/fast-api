@@ -6,11 +6,7 @@ function ImageProcess({ requestAuth }) {
     const [loggedUser, setLoggedUser] = useState(() => {
       const authenticated_user = sessionStorage.getItem("authenticated_user")
       if(authenticated_user) return JSON.parse(authenticated_user)
-      
-      requestAuth("img-grayscale")
-      setTimeout(() => {
-          window.location.reload()
-      }, 1000);
+     
       return null
     });
     const [uploadedImage,setUploadedImage] = useState()

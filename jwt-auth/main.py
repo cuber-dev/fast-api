@@ -32,80 +32,71 @@ users = [
 
 
 # ===========================================================================================
-# ============= JWT-AUTH - login testing with a sample software =============================
+# ============= JWT-AUTH - login testing with a sample software. =============================
 # ===========================================================================================
-# this is for converting image to base64 string for avoiding cors erros in frontend
+
+# Function to convert image to base64 string.
 def img_res_base64(img):
-    # first base64 format string and second base64 string
     return "data:image/jpeg;base64," + base64.b64encode(
         cv2.imencode(".jpg", img)[1].tobytes()
     ).decode()
 
-
+# Route for processing and returning a grayscale image.
 @app.post("/grayscale/{image_name}", dependencies=[Depends(jwt_bearer())])
 def grayscale(image_name: str, image: UploadFile = File(...)):
-    # storing the original image
+    # Storing the original image
     with open('./img_db/original/' + image_name, 'wb') as f:
         f.write(image.file.read())
 
-    # processeing original image
+    # Processing the original image to grayscale.
     ori_image = cv2.imread('./img_db/original/' + image_name)
     gray_img = cv2.cvtColor(ori_image, cv2.COLOR_BGR2GRAY)
 
-    # storing the processed image
+    # Storing the processed image
     cv2.imwrite(f'./img_db/processed/grayscale_{image_name}', gray_img)
 
-    # converting image to base64 string for avoiding cors erros in frontend
+    # Converting image to base64 string for avoiding CORS errors in frontend.
     gray_base64 = img_res_base64(gray_img)
     return {
         "grayscale_img": gray_base64
     }
 
-
-
-# we can enable this route to register their accounts 
-# @app.post("/users/sign-up")
-# async def sign_up(user: UserSchema = Body(default=None)):
-#     users.append(user.dict())
-#     return signJWT(user.email)
-
-
-# this route is for validating the user credintials.
+# Route for user login.
 @app.post("/login")
 async def login(user: UserLoginSchema = Body(default=None)):
     if validate_user(user):
-        return signJWT(user.email)
+        return signJWT(user.email)  # This will generate a JWT token and return it to the user.
     return HTTPException(status_code=401, detail="Invalid Credentials")
-def validate_user(data : UserLoginSchema):
+
+# Function to validate user credentials.
+def validate_user(data: UserLoginSchema):
     for user in users:
         if user["email"] == data.email and user["password"] == data.password:
-            print("user has a account : ",user)
+            print("User has an account: ", user)
             return True
     return False
 
-# this route is for validating the JWT Token.
+# Route for validating the JWT Token.
 @app.get("/validate-t/{jwt}")
-def login(jwt : str):
+def validate_token(jwt: str):
     print("===================================================================")
-    print("original jwt : ",jwt)
+    print("Original JWT: ", jwt)
     decoded_jwt = decodeJWT(jwt)
-    print("decoded jwt : ",decoded_jwt)
+    print("Decoded JWT: ", decoded_jwt)
     if len(decoded_jwt) != 0:
         for user in users:
             if user["email"] == decoded_jwt["email"]:
-                print("user jwt token is valid : ",user)
+                print("User JWT token is valid: ", user)
                 print("===================================================================")
-
-                return { "is_valid_jwt" : True}
-    print("user jwt token is invalid and his credintials are : ",decoded_jwt)
+                return {"is_valid_jwt": True}
+    print("User JWT token is invalid, and their credentials are: ", decoded_jwt)
     print("===================================================================")
+    return HTTPException(status_code=401, detail="Invalid or Expired token, please login again!")
 
-    return HTTPException(status_code=401, detail="Invalid token, please login again!")
- 
-
+# Root or Home route.
 @app.get("/")
 def read_root():
-    return { "msg" : "server is running!"}
+    return {"msg": "Server is running!"}
 # ===========================================================================================
 # ===========================================================================================
 # ===========================================================================================
