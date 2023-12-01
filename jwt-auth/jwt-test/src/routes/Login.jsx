@@ -1,18 +1,17 @@
-import React, { useContext, useRef } from 'react';
-import { context } from '../App';
+import React, { useContext, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
+import Cookies from 'universal-cookie';
 
 function Login() {
-    const { setUser } = useContext(context);
     const emailRef = useRef();
     const passwordRef = useRef();
     const imageLinkRef = useRef();
-
+    const cookies = new Cookies();
     function login() {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
 
-        const url = 'http://127.0.0.1:8000/users/login';
+        const url = 'http://127.0.0.1:8000/login';
         fetch(url, {
             method: 'POST',
             headers: {
@@ -25,24 +24,28 @@ function Login() {
             }),
         })
             .then(res => res.json())
-            .then(data => redirect(data))
+            .then(data => handleJWT(data))
             .catch(e => console.log(e));
     }
 
-    function redirect(data) {
+    function handleJWT(data) {
         console.log(data);
-        if (data.email && data.access_token) {
-            setUser(prev => ({ name: data.email, a_t: data.access_token }))
-            alert('logged in!')
+        if (data.email && data.jwt_token) {
+            cookies.set("test_user",JSON.stringify({ email : data.email, jwt_token: data.jwt_token }), { path: '/' });
+            sessionStorage.setItem("authenticated_user",JSON.stringify({ email : data.email, jwt_token: data.jwt_token }),)
+            
+            alert('logged in!');
             setTimeout(() => {
                 imageLinkRef.current.click();
             }, 1000);
-        }else{
-            alert('Invalid credntials!')
-            window.location.reload()
+        } else {
+            alert('Invalid credentials!');
+            sessionStorage.removeItem("authenticated_user")
+            cookies.remove("test_user")
+            window.location.reload();
         }
     }
-
+    
     return (
         <>
             <div className="login-container">
@@ -55,7 +58,7 @@ function Login() {
                     <button type="button" onClick={login}>Login</button>
                 </form>
             </div>
-            <NavLink ref={imageLinkRef} to={'/image'}></NavLink>
+            <NavLink ref={imageLinkRef} to={'/img-grayscale'}></NavLink>
         </>
     );
 }
